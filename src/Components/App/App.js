@@ -6,7 +6,7 @@ import Flashcards from '../Flashcards/Flashcards'
 import flashcardsData from '../../Data/flashcardsData.json'
 
 const App = () => {
-  const [flashcards, setFlashcards] = useState([flashcardsData])
+  const [flashcards, setFlashcards] = useState(flashcardsData)
 
   return (
    <main>
@@ -23,7 +23,8 @@ const App = () => {
         render={({ match }) => {
           if (match.params.category === 'behavioral' || 'technical') {
             return <Flashcards
-            flashcards={flashcards} 
+            flashcards={flashcards}
+            category={match.params.category} 
             />
           }
         }}
