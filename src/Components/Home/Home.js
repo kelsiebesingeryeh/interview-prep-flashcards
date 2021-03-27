@@ -6,10 +6,10 @@ const Home = () => {
       <section className='mainHomepage'>
         <h1>Frontend Interview Flashcards</h1>
         <h2>Choose your interview path below</h2>
-        <Link to='behavioral'>
+        <Link to='/behavioral'>
             <button>Behavioral</button>
         </Link>
-        <Link to='technical'>
+        <Link to='/technical'>
             <button>Technical</button>
         </Link>
       </section>
