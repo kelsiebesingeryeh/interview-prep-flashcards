@@ -34,7 +34,31 @@ const App = () => {
       <Route 
       exact path='/:category/:subCategory'
       render={({ match }) => {
-        if (match.params.subCategory === "HTML/CSS") {
+        if (match.params.subCategory === 'htmlCSS') {
+          return (
+            <Flashcards
+              flashcards={flashcards}
+              category={match.params.category}
+              subCategory={match.params.subCategory}
+            />
+          )
+        } else if (match.params.subCategory === 'computerScience') {
+          return (
+            <Flashcards
+              flashcards={flashcards}
+              category={match.params.category}
+              subCategory={match.params.subCategory}
+            />
+          )
+        } else if (match.params.subCategory === 'javaScript') {
+          return (
+            <Flashcards
+              flashcards={flashcards}
+              category={match.params.category}
+              subCategory={match.params.subCategory}
+            />
+          )
+        } else if (match.params.subCategory === 'react') {
           return (
             <Flashcards
               flashcards={flashcards}
