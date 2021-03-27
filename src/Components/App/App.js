@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Home from '../Home/Home'
 import { Route, Switch } from 'react-router-dom'
 import Flashcards from '../Flashcards/Flashcards'
@@ -22,7 +22,9 @@ const App = () => {
         path='/:category'
         render={({ match }) => {
           if (match.params.category === 'behavioral' || 'technical') {
-            return <Flashcards />
+            return <Flashcards
+            flashcards={flashcards} 
+            />
           }
         }}
         />
