@@ -1,11 +1,16 @@
 import './App.css'
-import React from 'react'
+import React, { Component } from 'react'
 import Home from '../Home/Home'
+import { Route } from 'react-router-dom'
 
 const App = () => {
   return (
    <main>
-     <Home />
+     <Route
+     exact
+     path='/'
+     render={() => <Home />}
+     />
    </main>
   )
 }
