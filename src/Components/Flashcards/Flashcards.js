@@ -32,16 +32,10 @@ const Flashcards = ({
      setCurrentCard(categoryCards[nextCard]);
   }
 
-  // const htmlCSSFlashcards = flashcards.filter(card => card.subCategory === 'HTML/CSS')
-  // flashcards is an array of objects
-  // subcategory is HTML, CS, JS, React
-  // category- technical or behvavorial
-
-  // const filterFlashCards = (cat) => {
-  //     return flashcards.filter((card) => card.category === cat)
-  // }
-
-  //
+  const startOver = () => {
+      const lastIndex = categoryCards[categoryCards.length - 1]
+      
+  }
 
   // based upon whatevery subCategory I pick, I want to display the cards that align with that category
   // get the property of the card, filter by that and return the array that matches
@@ -66,11 +60,14 @@ const Flashcards = ({
           onClick={() => selectNextFlashcard()}
         />
       </span>
+      <button onClick={startOver}>Start Over</button>
     </div>
   );
 };
 
 export default Flashcards;
+
+// when you get to the last card, the right arrow button becomes disabled and there is a button called start over
 
 // on left arrow, needs to be a click to update the cards with the next set of cards
 // right arrow, needs to be a click to update the cards with the next set of cards
