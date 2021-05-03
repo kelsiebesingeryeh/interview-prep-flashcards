@@ -1,6 +1,6 @@
-import React from 'react' 
+import React from 'react'; 
 
-const Card = ({id, question}) => {
+const Card = ({ question }) => {
     return (
         <div>
             <p>{question}</p>

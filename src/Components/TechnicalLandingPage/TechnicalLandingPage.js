@@ -1,5 +1,5 @@
 import React from 'react'
-import "./TechnicalLandingPage.css";
+import "./TechnicalLandingPage.css"
 import { Link } from 'react-router-dom' 
 
 const TechnicalLandingPage = ({ category }) => {
@@ -14,7 +14,7 @@ const TechnicalLandingPage = ({ category }) => {
         </Link>
         <Link to={`${category}/computerScience`}>
           <button className="subCategoryButton">
-            Generic Computer Science
+            Computer Science
           </button>
         </Link>
         <Link to={`${category}/javaScript`}>
@@ -25,10 +25,10 @@ const TechnicalLandingPage = ({ category }) => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TechnicalLandingPage;
+export default TechnicalLandingPage
 
 //needs some sort of conditional to render either behavioral or technical
 
