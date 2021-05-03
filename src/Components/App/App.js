@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Home from '../Home/Home'
 import { Route, Switch } from 'react-router-dom'
 import TechnicalLandingPage from "../TechnicalLandingPage/TechnicalLandingPage";
@@ -8,12 +8,12 @@ import flashcardsData from '../../Data/flashcardsData.json'
 import Flashcards from '../Flashcards/Flashcards'
 
 const App = () => {
-  const [flashcards, setFlashcards] = useState([])
+  const [flashcards, setFlashcards] = useState(flashcardsData);
 
-
-  useEffect(() => {
-    setFlashcards(flashcardsData)
-  }, [])
+  const updateNextFlashcard = (id) => {
+    let index = flashcards.findIndex(card => card.id === id)
+    
+  }
   // useEffect to set the flashcards
   // select next card
   // find the index of the card that i have
