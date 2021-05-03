@@ -33,8 +33,10 @@ const Flashcards = ({
   }
 
   const startOver = () => {
-      const lastIndex = categoryCards[categoryCards.length - 1]
-      
+      const lastQuestion = categoryCards[categoryCards.length - 1]
+      if (lastQuestion.id === currentCard.id) {
+          setCurrentCard(htmlCSS);
+      }
   }
 
   // based upon whatevery subCategory I pick, I want to display the cards that align with that category
