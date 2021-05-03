@@ -10,9 +10,8 @@ import Flashcards from '../Flashcards/Flashcards'
 const App = () => {
   const [flashcards, setFlashcards] = useState(flashcardsData);
 
-  const updateNextFlashcard = (id) => {
-    let index = flashcards.findIndex(card => card.id === id)
-    
+  const getFlashcardIndex = (id, list) => {
+    return list.findIndex(card => card.id === id)
   }
   // useEffect to set the flashcards
   // select next card
@@ -38,7 +37,6 @@ const App = () => {
         render={({ match }) => {
           if (match.params.category === 'behavioral' || 'technical') {
             return <TechnicalLandingPage
-            flashcards={flashcards}
             category={match.params.category} 
             />
           }
@@ -53,8 +51,9 @@ const App = () => {
               flashcards={flashcards}
               category={match.params.category}
               subCategory={match.params.subCategory}
+              getFlashcardIndex={getFlashcardIndex}
             />
-          )
+          );
         } else if (match.params.subCategory === 'computerScience') {
           return (
             <Flashcards

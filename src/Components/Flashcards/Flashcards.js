@@ -4,22 +4,33 @@ import rightArrow from "../../assets/rightArrow.png";
 import "./Flashcards.css";
 import Card from "../Card/Card";
 
-const Flashcards = ({ flashcards, subCategory, category }) => {
-  const [currentCard, setCurrentCard] = useState({})
-  let htmlCSS = flashcards.find((card) => card.subCategory === "HTML/CSS"
-  );
+const Flashcards = ({
+  flashcards,
+  subCategory,
+  category,
+  getFlashcardIndex,
+}) => {
+  const [currentCard, setCurrentCard] = useState({});
+  const [categoryCards, setCategoryCards] = useState([]);
+  let htmlCSS = flashcards.find((card) => card.subCategory === "HTML/CSS");
 
   useEffect(() => {
-      if (subCategory === 'htmlCSS') {
-         return setCurrentCard(htmlCSS);
-      }
-  }, [])
+    if (subCategory === "htmlCSS") {
+      setCategoryCards(
+        flashcards.filter((card) => card.subCategory === "HTML/CSS")
+      );
+      setCurrentCard(htmlCSS);
+    }
+  }, []);
 
   const displayFlashCard = () => {
-      return currentCard.question
+    return currentCard.question;
+  };
+
+  const selectNextFlashcard = () => {
+     let nextCard = getFlashcardIndex(currentCard.id, categoryCards) + 1;
+     setCurrentCard(categoryCards[nextCard]);
   }
-
-
 
   // const htmlCSSFlashcards = flashcards.filter(card => card.subCategory === 'HTML/CSS')
   // flashcards is an array of objects
@@ -47,8 +58,13 @@ const Flashcards = ({ flashcards, subCategory, category }) => {
     <div className="flashcardsContainer">
       <p>{displayFlashCard()}</p>
       <span className="arrowStyling">
-        <img src={leftArrow} alt="left-arrow" />
-        <img src={rightArrow} alt="right-arrow" />
+        <img src={leftArrow} alt="left-arrow" className="left-arrow" />
+        <img
+          src={rightArrow}
+          alt="right-arrow"
+          className="right-arrow"
+          onClick={() => selectNextFlashcard()}
+        />
       </span>
     </div>
   );
