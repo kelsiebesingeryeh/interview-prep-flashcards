@@ -12,7 +12,10 @@ const Flashcards = ({
 }) => {
   const [currentCard, setCurrentCard] = useState({});
   const [categoryCards, setCategoryCards] = useState([]);
+  const [lastCard, setLastCard] = useState(false);
+  
   let htmlCSS = flashcards.find((card) => card.subCategory === "HTML/CSS");
+  const lastQuestion = categoryCards[categoryCards.length - 1]
 
   useEffect(() => {
     if (subCategory === "htmlCSS") {
@@ -28,14 +31,22 @@ const Flashcards = ({
   };
 
   const selectNextFlashcard = () => {
-     let nextCard = getFlashcardIndex(currentCard.id, categoryCards) + 1;
+     const nextCard = getFlashcardIndex(currentCard.id, categoryCards) + 1;
      setCurrentCard(categoryCards[nextCard]);
+     displayStartButton()
+    }
+    
+    const displayStartButton = () => {
+        const nextToLastCard = getFlashcardIndex(lastQuestion.id, categoryCards) - 1;
+        if (categoryCards[nextToLastCard].id === currentCard.id) {
+            setLastCard(true)
+        }
   }
 
   const startOver = () => {
-      const lastQuestion = categoryCards[categoryCards.length - 1]
       if (lastQuestion.id === currentCard.id) {
           setCurrentCard(htmlCSS);
+          setLastCard(false)
       }
   }
 
@@ -55,14 +66,18 @@ const Flashcards = ({
       <p>{displayFlashCard()}</p>
       <span className="arrowStyling">
         <img src={leftArrow} alt="left-arrow" className="left-arrow" />
+        {!lastCard && 
         <img
           src={rightArrow}
           alt="right-arrow"
           className="right-arrow"
           onClick={() => selectNextFlashcard()}
         />
+        }
       </span>
+      {lastCard && 
       <button onClick={startOver}>Start Over</button>
+      }
     </div>
   );
 };
