@@ -18,17 +18,15 @@ const Flashcards = ({
      return flashcards.find((card) => card.subCategory === subCat)
   }
 
-  console.log(findCategoryCard("HTML/CSS"));
-
   const lastQuestion = categoryCards[categoryCards.length - 1];
 
   useEffect(() => {
     if (subCategory === "htmlCSS") {
       setCategoryCards(
-        flashcards.filter((card) => card.subCategory === "HTML/CSS")
+        flashcards.filter((card) => card.subCategory === "htmlCSS")
         );
         console.log(currentCard)
-        setCurrentCard(findCategoryCard("HTML/CSS"));
+        setCurrentCard(findCategoryCard("htmlCSS"));
     } else if (subCategory === "computerScience") {
       setCategoryCards(
         flashcards.filter(
@@ -68,9 +66,8 @@ const Flashcards = ({
 
   const startOver = () => {
       if (lastQuestion.id === currentCard.id) {
-          setCurrentCard({});
+          setCurrentCard(findCategoryCard(subCategory));
           setLastCard(false);
-          return <Redirect to="/" />
         }
   }
 
