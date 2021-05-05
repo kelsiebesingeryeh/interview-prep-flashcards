@@ -15,14 +15,36 @@ const Flashcards = ({
   const [lastCard, setLastCard] = useState(false);
   
   let htmlCSS = flashcards.find((card) => card.subCategory === "HTML/CSS");
+  let compSci = flashcards.find((card) => card.subCategory === "General Computer Science");
+  console.log(subCategory);
+  let javascript = flashcards.find((card) => card.subCategory === "JavaScript");
+  let react = flashcards.find((card) => card.subCategory === "React");
+  
   const lastQuestion = categoryCards[categoryCards.length - 1]
 
   useEffect(() => {
     if (subCategory === "htmlCSS") {
       setCategoryCards(
         flashcards.filter((card) => card.subCategory === "HTML/CSS")
+        );
+        setCurrentCard(htmlCSS);
+    } else if (subCategory === "computerScience") {
+      setCategoryCards(
+        flashcards.filter(
+          (card) => card.subCategory === "General Computer Science"
+        )
       );
-      setCurrentCard(htmlCSS);
+      setCurrentCard(compSci);
+    } else if (subCategory === 'javaScript') {
+        setCategoryCards(
+          flashcards.filter((card) => card.subCategory === "javaScript")
+        );
+        setCurrentCard(javascript);
+    } else if (subCategory === 'react') {
+        setCategoryCards(
+          flashcards.filter((card) => card.subCategory === "react")
+        );
+        setCurrentCard(react);
     }
   }, []);
 
