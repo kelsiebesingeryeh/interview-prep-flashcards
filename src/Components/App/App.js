@@ -62,7 +62,7 @@ const App = () => {
               getFlashcardIndex={getFlashcardIndex}
             />
           );
-        } else if (match.params.subCategory === 'javaScript') {
+        } else if (match.params.subCategory === 'javascript') {
           return (
             <Flashcards
               flashcards={flashcards}

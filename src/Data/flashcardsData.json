@@ -2,53 +2,53 @@
   {
     "id": 1,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question":
       "In as much detail as possible, explain how you would localize an application."
   },
   {
     "id": 2,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "Tell me two advantages of testing your code."
   },
   {
     "id": 3,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "Name three strategies for fixing cross-browser inconsistencies."
   },
   {
     "id": 4,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question":
       "What are some tools and strategies you use to prevent shipping unstable code to production?"
   },
   {
     "id": 5,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question":
       "What factors influence whether you’ll take a progressive enhancement vs. graceful degradation approach to building an application?"
   },
   {
     "id": 6,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question":
       "Define the term ‘MVC’ and explain how an application is architected when following MVC patterns."
   },
   {
     "id": 7,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "What does CORS stand for and what issue does it address?"
   },
   {
     "id": 8,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question":
       "In as much detail as possible, describe the request-response cycle."
   },
@@ -94,72 +94,72 @@
   {
     "id": 15,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question":
       "Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?"
   },
   {
     "id": 16,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "What does event bubbling or event propagation mean?"
   },
   {
     "id": 17,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "What’s the difference between undefined and null"
   },
   {
     "id": 18,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question":
       "In as much detail as possible, explain how JSON Web Tokens work."
   },
   {
     "id": 19,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "What is Ajax?"
   },
   {
     "id": 20,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question":
       "What is use strict? What are the advantages and disadvantages to using it?"
   },
   {
     "id": 21,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question":
       "Explain why the following doesn’t work as an IIFE: function foo(){ }();. What needs to be changed to properly make it an IIFE? Why?"
   },
   {
     "id": 22,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question":
       "What are the pros and cons of using Promises instead of callbacks?"
   },
   {
     "id": 23,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "What is a closure, and how/why would you use one?"
   },
   {
     "id": 24,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question": "What advantages does React offer? What about disadvantages?"
   },
   {
     "id": 25,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question":
       "Why is it generally a good idea to position CSS <link>s between <head></head> and JS <script>s just before </body>? Do you know any exceptions?"
   },
@@ -178,7 +178,7 @@
   {
     "id": 28,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "What’s the difference between window.onload and onDocumentReady"
   },
   {
@@ -211,233 +211,233 @@
   {
     "id": 33,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "What is the event loop?"
   },
   {
     "id": 34,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "What are some popular NodeJS Modules?"
   },
   {
     "id": 35,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question": "What is the concept of state in React?"
   },
   {
     "id": 36,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question": "What is the virtual DOM in React?"
   },
   {
     "id": 37,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "How is an array different from an object?"
   },
   {
     "id": 38,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question": "What is the DOM? How is the virtual dom different?"
   },
   {
     "id": 39,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "What does npm eject do?"
   },
   {
     "id": 40,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "What does npm build do?"
   },
   {
     "id": 41,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question":
       "How do you make sure your project meets the requirements you have received?"
   },
   {
     "id": 42,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "What IDE do you use?"
   },
   {
     "id": 43,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "How does json work?"
   },
   {
     "id": 44,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "What is a restful api?"
   },
   {
     "id": 45,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question": "What is a react component?"
   },
   {
     "id": 46,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question":
       "Whats the difference between map state to props and map dispatch to props?"
   },
   {
     "id": 47,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question": "What problems does redux solve?"
   },
   {
     "id": 48,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "What are libraries you have used?"
   },
   {
     "id": 49,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "What are frameworks you have used?"
   },
   {
     "id": 50,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question": "How are props different from state?"
   },
   {
     "id": 51,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "Do you know the concept of SCRUM?"
   },
   {
     "id": 52,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question": "What is JSX?"
   },
   {
     "id": 53,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question": "How is JSX different from HTML?"
   },
   {
     "id": 54,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "Explain how a branch works"
   },
   {
     "id": 55,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "What can you tell me about Rest APIs?"
   },
   {
     "id": 56,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "Do you know what a bearer token is in terms of JWT?"
   },
   {
     "id": 57,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "What is CORS?"
   },
   {
     "id": 58,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "Whats the difference between ES5 and ES6?"
   },
   {
     "id": 59,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question":
       "What method would you use to search an array and return a value?"
   },
   {
     "id": 60,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question":
       "How would you find all the values for a specific key in an array of objects?"
   },
   {
     "id": 61,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "How do you interact with APIs on the front end?"
   },
   {
     "id": 62,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "Whats the difference between an HTTP request and response?"
   },
   {
     "id": 63,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "What does a 200 status code mean?"
   },
   {
     "id": 64,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "What does a 400 status code mean?"
   },
   {
     "id": 65,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "What is chaining in javascript?"
   },
   {
     "id": 66,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question": "How do you stay up-to-date on JS and React news/improvements?"
   },
   {
     "id": 67,
     "category": "technical",
-    "subCategory": "General Computer Science",
+    "subCategory": "computerScience",
     "question": "Why use cookies?"
   },
   {
     "id": 68,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "Have you used local storage?"
   },
   {
     "id": 69,
     "category": "technical",
-    "subCategory": "JavaScript",
+    "subCategory": "javascript",
     "question": "Whats the difference between let and const?"
   },
   {
     "id": 70,
     "category": "technical",
-    "subCategory": "React",
+    "subCategory": "react",
     "question": "Whats your experience with React Hooks? Why use them?"
   }
 ]
