@@ -3,48 +3,49 @@ import leftArrow from "../../assets/leftArrow.png";
 import rightArrow from "../../assets/rightArrow.png";
 import "./Flashcards.css";
 import Card from "../Card/Card";
+import { Redirect } from 'react-router-dom'; 
 
 const Flashcards = ({
   flashcards,
   subCategory,
-  category,
   getFlashcardIndex,
 }) => {
   const [currentCard, setCurrentCard] = useState({});
   const [categoryCards, setCategoryCards] = useState([]);
   const [lastCard, setLastCard] = useState(false);
   
-  let htmlCSS = flashcards.find((card) => card.subCategory === "HTML/CSS");
-  let compSci = flashcards.find((card) => card.subCategory === "General Computer Science");
-  console.log(subCategory);
-  let javascript = flashcards.find((card) => card.subCategory === "JavaScript");
-  let react = flashcards.find((card) => card.subCategory === "React");
-  
-  const lastQuestion = categoryCards[categoryCards.length - 1]
+  const findCategoryCard = (subCat) => {
+     return flashcards.find((card) => card.subCategory === subCat)
+  }
+
+  console.log(findCategoryCard("HTML/CSS"));
+
+  const lastQuestion = categoryCards[categoryCards.length - 1];
 
   useEffect(() => {
     if (subCategory === "htmlCSS") {
       setCategoryCards(
         flashcards.filter((card) => card.subCategory === "HTML/CSS")
         );
-        setCurrentCard(htmlCSS);
+        console.log(currentCard)
+        setCurrentCard(findCategoryCard("HTML/CSS"));
     } else if (subCategory === "computerScience") {
       setCategoryCards(
         flashcards.filter(
           (card) => card.subCategory === "General Computer Science"
         )
       );
-      setCurrentCard(compSci);
+      setCurrentCard(findCategoryCard('General Computer Science'));
     } else if (subCategory === 'javaScript') {
         setCategoryCards(
-          flashcards.filter((card) => card.subCategory === "javaScript")
+          flashcards.filter((card) => card.subCategory === "JavaScript")
         );
-        setCurrentCard(javascript);
+        setCurrentCard(findCategoryCard('JavaScript'));
     } else if (subCategory === 'react') {
         setCategoryCards(
-          flashcards.filter((card) => card.subCategory === "react")
+          flashcards.filter((card) => card.subCategory === "React")
         );
-        setCurrentCard(react);
+        setCurrentCard(findCategoryCard('React'));
     }
   }, []);
 
@@ -67,9 +68,10 @@ const Flashcards = ({
 
   const startOver = () => {
       if (lastQuestion.id === currentCard.id) {
-          setCurrentCard(htmlCSS);
-          setLastCard(false)
-      }
+          setCurrentCard({});
+          setLastCard(false);
+          return <Redirect to="/" />
+        }
   }
 
   // based upon whatevery subCategory I pick, I want to display the cards that align with that category
@@ -87,14 +89,16 @@ const Flashcards = ({
     <div className="flashcardsContainer">
       <p>{displayFlashCard()}</p>
       <span className="arrowStyling">
+        {!lastCard &&
+        <> 
         <img src={leftArrow} alt="left-arrow" className="left-arrow" />
-        {!lastCard && 
         <img
           src={rightArrow}
           alt="right-arrow"
           className="right-arrow"
           onClick={() => selectNextFlashcard()}
         />
+        </>
         }
       </span>
       {lastCard && 
@@ -106,7 +110,6 @@ const Flashcards = ({
 
 export default Flashcards;
 
-// when you get to the last card, the right arrow button becomes disabled and there is a button called start over
 
 // on left arrow, needs to be a click to update the cards with the next set of cards
 // right arrow, needs to be a click to update the cards with the next set of cards
