@@ -6,3 +6,21 @@
     justify-content: space-evenly;
     margin-top: 2rem;
 }
+
+.right-arrow {
+    background-image: url("../../assets/rightArrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.left-arrow {
+    background-image: url("../../assets/leftArrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}

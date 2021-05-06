@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import leftArrow from "../../assets/leftArrow.png";
-import rightArrow from "../../assets/rightArrow.png";
 import "./Flashcards.css";
 import { Link } from 'react-router-dom';
 
@@ -18,6 +16,7 @@ const Flashcards = ({
   }
 
   const lastQuestion = categoryCards[categoryCards.length - 1];
+  const firstQuestion = categoryCards[0];
 
   useEffect(() => {
       setCategoryCards(
@@ -49,11 +48,16 @@ const Flashcards = ({
         }
   }
 
+  const selectLastFlashcard = () => {
+      const lastCard = getFlashcardIndex(currentCard.id, categoryCards) - 1;
+      setCurrentCard(categoryCards[lastCard]);
+  }
 
  
-
+  // TO DO
   // first question back arrow should be disabled
-  // last question front arrow should be disabled
+  // add functionality to go back one
+  // maybe add overall button that takes you back to home or categories page
 
   return (
     <div className="flashcardsContainer">
@@ -61,22 +65,28 @@ const Flashcards = ({
       <span className="arrowStyling">
         {!lastCard && (
           <>
-            <img src={leftArrow} alt="left-arrow" className="left-arrow" />
-            <img
-              src={rightArrow}
+            <button
+              type="submit"
+              alt="left-arrow"
+              className="left-arrow"
+              onClick={() => selectLastFlashcard()}
+            ></button>
+            <button
+              type="submit"
               alt="right-arrow"
               className="right-arrow"
               onClick={() => selectNextFlashcard()}
-            />
+            >
+            </button>
           </>
         )}
       </span>
       {lastCard && (
         <>
-          <button onClick={startOver}>Start Over</button>
           <Link to="/technical">
             <button>Back to Categories</button>
           </Link>
+          <button onClick={startOver}>Start Over</button>
         </>
       )}
     </div>
