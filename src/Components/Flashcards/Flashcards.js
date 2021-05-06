@@ -39,7 +39,8 @@ const Flashcards = ({
     const displayStartButton = () => {
         const nextToLastCard = getFlashcardIndex(lastQuestion.id, categoryCards) - 1;
         if (categoryCards[nextToLastCard].id === currentCard.id) {
-            setLastCard(true)
+            setLastCard(true);
+            setFirstCard(true);
         }
   }
 
@@ -70,7 +71,7 @@ const Flashcards = ({
             <button
               type="submit"
               alt="left-arrow"
-              className="left-arrow"
+              className={`left-arrow ${firstCard ? 'disabled' : ''}`}
               disabled={firstCard ? true : false}
               onClick={() => selectLastFlashcard()}
             ></button>
