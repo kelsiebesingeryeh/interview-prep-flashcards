@@ -10,6 +10,7 @@ const Flashcards = ({
   const [currentCard, setCurrentCard] = useState({});
   const [categoryCards, setCategoryCards] = useState([]);
   const [lastCard, setLastCard] = useState(false);
+  const [firstCard, setFirstCard] = useState(true);
   
   const findCategoryCard = (subCat) => {
      return flashcards.find((card) => card.subCategory === subCat)
@@ -31,7 +32,8 @@ const Flashcards = ({
   const selectNextFlashcard = () => {
      const nextCard = getFlashcardIndex(currentCard.id, categoryCards) + 1;
      setCurrentCard(categoryCards[nextCard]);
-     displayStartButton()
+     setFirstCard(false);
+     displayStartButton();
     }
     
     const displayStartButton = () => {
@@ -69,6 +71,7 @@ const Flashcards = ({
               type="submit"
               alt="left-arrow"
               className="left-arrow"
+              disabled={firstCard ? true : false}
               onClick={() => selectLastFlashcard()}
             ></button>
             <button
@@ -76,8 +79,7 @@ const Flashcards = ({
               alt="right-arrow"
               className="right-arrow"
               onClick={() => selectNextFlashcard()}
-            >
-            </button>
+            ></button>
           </>
         )}
       </span>
