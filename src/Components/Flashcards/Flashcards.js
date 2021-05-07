@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Flashcards.css";
 import { Link } from 'react-router-dom';
 
@@ -7,9 +7,7 @@ const Flashcards = ({
   subCategory,
   getFlashcardIndex,
 }) => {
-  const [categoryCards, setCategoryCards] = useState(
-    flashcards.filter((card) => card.subCategory === subCategory)
-    );
+  const [categoryCards, setCategoryCards] = useState(flashcards.filter((card) => card.subCategory === subCategory));
   const [currentCard, setCurrentCard] = useState(categoryCards[0]);
   const [lastCard, setLastCard] = useState(false);
   const [firstCard, setFirstCard] = useState(true);
@@ -18,20 +16,15 @@ const Flashcards = ({
 //      return flashcards.find((card) => card.subCategory === subCat)
 //   }
 
-  const lastQuestion = categoryCards[categoryCards.length - 1];
-      
-      const displayFlashCard = () => {
-      return currentCard.question;
-  };
+  const lastQuestion = categoryCards[categoryCards.length - 1]; 
+  const firstQuestion = categoryCards[0]   
 
   const selectNextFlashcard = () => {
-     const nextCard = getFlashcardIndex(currentCard.id, categoryCards) + 1;
-     setCurrentCard(categoryCards[nextCard]);
+    const nextCardIndex = categoryCards.findIndex(card => card.id === currentCard.id) + 1
+     setCurrentCard(categoryCards[nextCardIndex]);
      setFirstCard(false);
      displayStartButton();
     }
-
-    // list.findIndex((card) => card.id === id);
     
     const displayStartButton = () => {
         const nextToLastCard = getFlashcardIndex(lastQuestion.id, categoryCards) - 1;
@@ -49,9 +42,14 @@ const Flashcards = ({
   }
 
   const selectLastFlashcard = () => {
-      console.log('currentcard', currentCard.id)
       const lastCard = getFlashcardIndex(currentCard.id, categoryCards);
+      const nextToFirstCard =
+        getFlashcardIndex(firstQuestion.id, categoryCards) + 1;
       setCurrentCard(categoryCards[lastCard - 1]);
+      if (categoryCards[nextToFirstCard].id === currentCard.id) {
+        setFirstCard(true);
+      }
+      // if the current card is the first card then we need to set the first card to true
     }
     
     
@@ -59,19 +57,18 @@ const Flashcards = ({
     //   }
   // TO DO
   // first question back arrow should be disabled
-  // add functionality to go back one
   // maybe add overall button that takes you back to home or categories page
 
   return (
     <div className="flashcardsContainer">
-      <p>{displayFlashCard()}</p>
+      <p>{currentCard.question}</p>
       <span className="arrowStyling">
         {!lastCard && (
           <>
             <button
               type="submit"
               alt="left-arrow"
-              className={`left-arrow ${firstCard ? 'disabled' : ''}`}
+              className={`left-arrow ${firstCard ? "disabled" : ""}`}
               disabled={firstCard ? true : false}
               onClick={() => selectLastFlashcard()}
             ></button>
