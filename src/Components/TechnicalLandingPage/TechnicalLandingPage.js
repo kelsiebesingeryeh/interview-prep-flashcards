@@ -17,7 +17,7 @@ const TechnicalLandingPage = ({ category }) => {
             Computer Science
           </button>
         </Link>
-        <Link to={`${category}/javaScript`}>
+        <Link to={`${category}/javascript`}>
           <button className="subCategoryButton">JavaScript</button>
         </Link>
         <Link to={`${category}/react`}>

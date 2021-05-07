@@ -49,7 +49,6 @@ const App = () => {
           return (
             <Flashcards
               flashcards={flashcards}
-              category={match.params.category}
               subCategory={match.params.subCategory}
               getFlashcardIndex={getFlashcardIndex}
             />
@@ -60,22 +59,25 @@ const App = () => {
               flashcards={flashcards}
               category={match.params.category}
               subCategory={match.params.subCategory}
+              getFlashcardIndex={getFlashcardIndex}
             />
-          )
-        } else if (match.params.subCategory === 'javaScript') {
+          );
+        } else if (match.params.subCategory === 'javascript') {
           return (
             <Flashcards
               flashcards={flashcards}
               category={match.params.category}
               subCategory={match.params.subCategory}
+              getFlashcardIndex={getFlashcardIndex}
             />
-          )
+          );
         } else if (match.params.subCategory === 'react') {
           return (
             <Flashcards
               flashcards={flashcards}
               category={match.params.category}
               subCategory={match.params.subCategory}
+              getFlashcardIndex={getFlashcardIndex}
             />
           );
         }

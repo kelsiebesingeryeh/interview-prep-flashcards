@@ -1,90 +1,100 @@
-import React, { useEffect, useState } from "react";
-import leftArrow from "../../assets/leftArrow.png";
-import rightArrow from "../../assets/rightArrow.png";
+import React, { useState } from "react";
 import "./Flashcards.css";
-import Card from "../Card/Card";
+import { Link } from 'react-router-dom';
 
 const Flashcards = ({
   flashcards,
   subCategory,
-  category,
   getFlashcardIndex,
 }) => {
-  const [currentCard, setCurrentCard] = useState({});
-  const [categoryCards, setCategoryCards] = useState([]);
+  const [categoryCards, setCategoryCards] = useState(flashcards.filter((card) => card.subCategory === subCategory));
+  const [currentCard, setCurrentCard] = useState(categoryCards[0]);
   const [lastCard, setLastCard] = useState(false);
+  const [firstCard, setFirstCard] = useState(true);
   
-  let htmlCSS = flashcards.find((card) => card.subCategory === "HTML/CSS");
-  const lastQuestion = categoryCards[categoryCards.length - 1]
+//   const findCategoryCard = (subCat) => {
+//      return flashcards.find((card) => card.subCategory === subCat)
+//   }
 
-  useEffect(() => {
-    if (subCategory === "htmlCSS") {
-      setCategoryCards(
-        flashcards.filter((card) => card.subCategory === "HTML/CSS")
-      );
-      setCurrentCard(htmlCSS);
-    }
-  }, []);
-
-  const displayFlashCard = () => {
-    return currentCard.question;
-  };
+  const lastQuestion = categoryCards[categoryCards.length - 1]; 
+  const firstQuestion = categoryCards[0]   
 
   const selectNextFlashcard = () => {
-     const nextCard = getFlashcardIndex(currentCard.id, categoryCards) + 1;
-     setCurrentCard(categoryCards[nextCard]);
-     displayStartButton()
+    const nextCardIndex = categoryCards.findIndex(card => card.id === currentCard.id) + 1
+     setCurrentCard(categoryCards[nextCardIndex]);
+     setFirstCard(false);
+     displayStartButton();
     }
     
     const displayStartButton = () => {
         const nextToLastCard = getFlashcardIndex(lastQuestion.id, categoryCards) - 1;
         if (categoryCards[nextToLastCard].id === currentCard.id) {
-            setLastCard(true)
+            setLastCard(true);
         }
   }
 
   const startOver = () => {
       if (lastQuestion.id === currentCard.id) {
-          setCurrentCard(htmlCSS);
-          setLastCard(false)
-      }
+          setCurrentCard(categoryCards[0]);
+          setLastCard(false);
+          setFirstCard(true);
+        }
   }
 
-  // based upon whatevery subCategory I pick, I want to display the cards that align with that category
-  // get the property of the card, filter by that and return the array that matches
-  // then when I click the next button it goes to the next question
+  const selectLastFlashcard = () => {
+      const lastCard = getFlashcardIndex(currentCard.id, categoryCards);
+      const nextToFirstCard =
+        getFlashcardIndex(firstQuestion.id, categoryCards) + 1;
+      setCurrentCard(categoryCards[lastCard - 1]);
+      if (categoryCards[nextToFirstCard].id === currentCard.id) {
+        setFirstCard(true);
+      }
+      // if the current card is the first card then we need to set the first card to true
+    }
+    
+    
+    //   if (firstQuestion.id === currentCard.id) //setFirstCard(true);
+    //   }
+  // TO DO
   // first question back arrow should be disabled
-  // last question front arrow should be disabled
-  //   return flashcards.filter((card) => {
-  //     if (card.subCategory === subCat) {
-  //       return <Card key={card.id} question={card.question} />;
-  //     }
-  //   });
+  // maybe add overall button that takes you back to home or categories page
 
   return (
     <div className="flashcardsContainer">
-      <p>{displayFlashCard()}</p>
+      <p>{currentCard.question}</p>
       <span className="arrowStyling">
-        <img src={leftArrow} alt="left-arrow" className="left-arrow" />
-        {!lastCard && 
-        <img
-          src={rightArrow}
-          alt="right-arrow"
-          className="right-arrow"
-          onClick={() => selectNextFlashcard()}
-        />
-        }
+        {!lastCard && (
+          <>
+            <button
+              type="submit"
+              alt="left-arrow"
+              className={`left-arrow ${firstCard ? "disabled" : ""}`}
+              disabled={firstCard ? true : false}
+              onClick={() => selectLastFlashcard()}
+            ></button>
+            <button
+              type="submit"
+              alt="right-arrow"
+              className="right-arrow"
+              onClick={() => selectNextFlashcard()}
+            ></button>
+          </>
+        )}
       </span>
-      {lastCard && 
-      <button onClick={startOver}>Start Over</button>
-      }
+      {lastCard && (
+        <>
+          <Link to="/technical">
+            <button>Back to Categories</button>
+          </Link>
+          <button onClick={startOver}>Start Over</button>
+        </>
+      )}
     </div>
   );
 };
 
 export default Flashcards;
 
-// when you get to the last card, the right arrow button becomes disabled and there is a button called start over
 
 // on left arrow, needs to be a click to update the cards with the next set of cards
 // right arrow, needs to be a click to update the cards with the next set of cards
