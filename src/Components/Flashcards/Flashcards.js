@@ -7,26 +7,21 @@ const Flashcards = ({
   subCategory,
   getFlashcardIndex,
 }) => {
-  const [currentCard, setCurrentCard] = useState({});
-  const [categoryCards, setCategoryCards] = useState([]);
+  const [categoryCards, setCategoryCards] = useState(
+    flashcards.filter((card) => card.subCategory === subCategory)
+    );
+  const [currentCard, setCurrentCard] = useState(categoryCards[0]);
   const [lastCard, setLastCard] = useState(false);
   const [firstCard, setFirstCard] = useState(true);
   
-  const findCategoryCard = (subCat) => {
-     return flashcards.find((card) => card.subCategory === subCat)
-  }
+//   const findCategoryCard = (subCat) => {
+//      return flashcards.find((card) => card.subCategory === subCat)
+//   }
 
   const lastQuestion = categoryCards[categoryCards.length - 1];
-  const firstQuestion = categoryCards[0];
-
-  useEffect(() => {
-      setCategoryCards(
-        flashcards.filter((card) => card.subCategory === subCategory));
-        setCurrentCard(findCategoryCard(subCategory));
-  }, []);
-
-  const displayFlashCard = () => {
-    return currentCard.question;
+      
+      const displayFlashCard = () => {
+      return currentCard.question;
   };
 
   const selectNextFlashcard = () => {
@@ -35,28 +30,33 @@ const Flashcards = ({
      setFirstCard(false);
      displayStartButton();
     }
+
+    // list.findIndex((card) => card.id === id);
     
     const displayStartButton = () => {
         const nextToLastCard = getFlashcardIndex(lastQuestion.id, categoryCards) - 1;
         if (categoryCards[nextToLastCard].id === currentCard.id) {
             setLastCard(true);
-            setFirstCard(true);
         }
   }
 
   const startOver = () => {
       if (lastQuestion.id === currentCard.id) {
-          setCurrentCard(findCategoryCard(subCategory));
+          setCurrentCard(categoryCards[0]);
           setLastCard(false);
+          setFirstCard(true);
         }
   }
 
   const selectLastFlashcard = () => {
-      const lastCard = getFlashcardIndex(currentCard.id, categoryCards) - 1;
-      setCurrentCard(categoryCards[lastCard]);
-  }
-
- 
+      console.log('currentcard', currentCard.id)
+      const lastCard = getFlashcardIndex(currentCard.id, categoryCards);
+      setCurrentCard(categoryCards[lastCard - 1]);
+    }
+    
+    
+    //   if (firstQuestion.id === currentCard.id) //setFirstCard(true);
+    //   }
   // TO DO
   // first question back arrow should be disabled
   // add functionality to go back one
