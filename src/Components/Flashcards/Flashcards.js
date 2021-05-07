@@ -11,10 +11,6 @@ const Flashcards = ({
   const [currentCard, setCurrentCard] = useState(categoryCards[0]);
   const [lastCard, setLastCard] = useState(false);
   const [firstCard, setFirstCard] = useState(true);
-  
-//   const findCategoryCard = (subCat) => {
-//      return flashcards.find((card) => card.subCategory === subCat)
-//   }
 
   const lastQuestion = categoryCards[categoryCards.length - 1]; 
   const firstQuestion = categoryCards[0]   
@@ -49,16 +45,8 @@ const Flashcards = ({
       if (categoryCards[nextToFirstCard].id === currentCard.id) {
         setFirstCard(true);
       }
-      // if the current card is the first card then we need to set the first card to true
     }
     
-    
-    //   if (firstQuestion.id === currentCard.id) //setFirstCard(true);
-    //   }
-  // TO DO
-  // first question back arrow should be disabled
-  // maybe add overall button that takes you back to home or categories page
-
   return (
     <div className="flashcardsContainer">
       <p>{currentCard.question}</p>
@@ -94,7 +82,3 @@ const Flashcards = ({
 };
 
 export default Flashcards;
-
-
-// on left arrow, needs to be a click to update the cards with the next set of cards
-// right arrow, needs to be a click to update the cards with the next set of cards
