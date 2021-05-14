@@ -5,11 +5,13 @@
      left: 50%;
      padding: 5rem;
      transform: translate(-50%, -50%);
-     width: 400px
+     width: 80%;
 }
 
 .buttonContainer {
     display: flex;
+    justify-content: center;
+
 }
 
 .subCategoryButton {
