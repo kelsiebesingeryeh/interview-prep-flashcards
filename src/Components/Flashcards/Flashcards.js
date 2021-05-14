@@ -49,7 +49,7 @@ const Flashcards = ({
     
   return (
     <div className="flashcardsContainer">
-      <p className='question'>{currentCard.question}</p>
+      <p className="question">{currentCard.question}</p>
       <span className="arrowStyling">
         {!lastCard && (
           <>
@@ -70,12 +70,12 @@ const Flashcards = ({
         )}
       </span>
       {lastCard && (
-        <>
+        <span className="arrowStyling">
           <Link to="/technical">
             <button>Back to Categories</button>
           </Link>
           <button onClick={startOver}>Start Over</button>
-        </>
+        </span>
       )}
     </div>
   );
