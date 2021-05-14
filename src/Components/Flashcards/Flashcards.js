@@ -49,7 +49,7 @@ const Flashcards = ({
     
   return (
     <div className="flashcardsContainer">
-      <p>{currentCard.question}</p>
+      <p className='question'>{currentCard.question}</p>
       <span className="arrowStyling">
         {!lastCard && (
           <>
