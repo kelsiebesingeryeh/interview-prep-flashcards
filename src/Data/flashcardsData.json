@@ -443,87 +443,97 @@
    {
     "id": 71,
     "category": "behavioral",
-    "question": ""
+    "question": "What project of yours are you most proud of and why?
+"
   },
   {
     "id": 72,
     "category": "behavioral",
-    "question": ""
+    "question": "What is your 100% ideal role for your first web development job?
+"
   },
   {
     "id": 73,
     "category": "behavioral",
-    "question": ""
+    "question": "What made you switch from your prior career into programming?
+"
   },
   {
     "id": 74,
     "category": "behavioral",
-    "question": ""
+    "question": "Talk about a project where you had difficulty and how you worked through that.
+"
   },
   {
     "id": 75,
     "category": "behavioral",
-    "question": ""
+    "question": "What are you looking for in a company? Why would you want to work here?
+"
   },
   {
     "id": 76,
     "category": "behavioral",
-    "question": ""
+    "question": "Describe an example of how you have handled a stressful situation.
+"
   },
   {
     "id": 77,
     "category": "behavioral",
-    "question": ""
+    "question": "Tell me about a time you had a disagreement with a colleague and how you resolved it."
   },
   {
     "id": 78,
     "category": "behavioral",
-    "question": ""
+    "question": "Describe a time when you received feedback that you were surprised by. What did you do with that feedback?"
   },
   {
     "id": 79,
     "category": "behavioral",
-    "question": ""
+    "question": "Describe a successful idea or project you worked on. What are some of the challenges you had to overcome? What made it a success?"
   },
   {
     "id": 80,
     "category": "behavioral",
-    "question": ""
+    "question": "What is your approach to working on a team?"
   },
   {
     "id": 81,
     "category": "behavioral",
-    "question": ""
+    "question": "What is an area of growth for you?
+"
   },
   {
     "id": 82,
     "category": "behavioral",
-    "question": ""
+    "question": "Describe your strengths. How have you seen these in practice as a developer?
+"
   },
   {
     "id": 83,
     "category": "behavioral",
-    "question": ""
+    "question": "Tell me about a time you failed. How did you deal with the situation?
+"
   },
   {
     "id": 84,
     "category": "behavioral",
-    "question": ""
+    "question": "What is something that your hobbies or interests tell me about you that your resume cannot?
+"
   },
   {
     "id": 85,
     "category": "behavioral",
-    "question": ""
+    "question": "Give me an example of a time you were able to be creative with your work. What was exciting or difficult about it?"
   },
   {
     "id": 86,
     "category": "behavioral",
-    "question": ""
+    "question": "Sometimes it’s just not possible to get everything on your to-do list done. Tell me about a time your responsibilities got a little overwhelming. What did you do?"
   },
   {
     "id": 87,
     "category": "behavioral",
-    "question": ""
+    "question": "Tell me about a time you set a goal for yourself. How did you go about ensuring that you would meet your objective?"
   },
   {
     "id": 88,
@@ -533,261 +543,62 @@
   {
     "id": 89,
     "category": "behavioral",
-    "question": ""
+    "question": "Tell me about a time when you had to rely on written communication to get your ideas across to your team."
   },
   {
     "id": 90,
     "category": "behavioral",
-    "question": ""
+    "question": "Tell me about a successful presentation you gave and why you think it was a hit."
   },
   {
     "id": 91,
     "category": "behavioral",
-    "question": ""
+    "question": "Describe a long-term project that you managed. How did you keep everything moving along in a timely manner?"
   },
   {
     "id": 92,
     "category": "behavioral",
-    "question": ""
+    "question": "Describe a time when you saw some problem and took the initiative to correct it rather than waiting for someone else to do it."
   },
   {
     "id": 93,
     "category": "behavioral",
-    "question": ""
+    "question": "Tell me about a time when you worked under close supervision or extremely loose supervision. How did you handle that?"
   },
   {
     "id": 94,
     "category": "behavioral",
-    "question": ""
+    "question": "Tell me about a time you needed to get information from someone who wasn’t very responsive. What did you do?"
   },
   {
     "id": 95,
     "category": "behavioral",
-    "question": ""
+    "question": "Describe a project that failed, a project you had to give up on or a time you worked really hard on a project and it just didn’t pan out as expected. What happened? How did you make the decisions that you made?"
   },
   {
     "id": 96,
     "category": "behavioral",
-    "question": ""
+    "question": "Explain one of the most difficult code problems you’ve had to solve, either on your own authored code, or in contributing to someone else’s."
   },
   {
     "id": 97,
     "category": "behavioral",
-    "question": ""
+    "question": "Have you ever had to switch gears in the middle of a project to get something fixed immediately? How did you react?"
   },
   {
     "id": 98,
     "category": "behavioral",
-    "question": ""
+    "question": "Describe your coding experience and why you wish to continue?"
   },
   {
     "id": 99,
     "category": "behavioral",
-    "question": ""
+    "question": "Describe your time at Turing. What worked for you? What didn’t work for you? What was the structure of the program?"
   },
   {
     "id": 100,
     "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 101,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 102,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 103,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 104,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 105,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 106,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 107,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 108,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 109,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 110,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 111,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 112,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 113,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 114,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 115,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 116,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 117,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 118,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 119,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 120,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 121,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 122,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 123,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 124,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 125,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 126,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 127,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 128,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 129,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 130,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 131,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 132,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 133,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 134,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 135,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 136,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 137,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 138,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 139,
-    "category": "behavioral",
-    "question": ""
-  },
-  {
-    "id": 140,
-    "category": "behavioral",
-    "question": ""
+    "question": "Describe a time when you dealt with poor communication.
+"
   }
 ]
