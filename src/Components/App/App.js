@@ -1,17 +1,15 @@
 import './App.css';
 import React, { useState } from 'react';
-import Home from '../Home/Home';
 import { Route, Switch } from 'react-router-dom';
-import TechnicalLandingPage from "../TechnicalLandingPage/TechnicalLandingPage";
+import Home from '../Home/Home';
+import TechnicalLandingPage from '../TechnicalLandingPage/TechnicalLandingPage';
 import flashcardsData from '../../Data/flashcardsData.json';
 import Flashcards from '../Flashcards/Flashcards';
 
 const App = () => {
   const [flashcards, setFlashcards] = useState(flashcardsData);
 
-  const getFlashcardIndex = (id, list) => {
-    return list.findIndex(card => card.id === id)
-  }
+  const getFlashcardIndex = (id, list) => list.findIndex((card) => card.id === id);
 
   return (
    <main>
