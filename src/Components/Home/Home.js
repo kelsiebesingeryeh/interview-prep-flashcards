@@ -1,22 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './Home.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Home.css';
 
 const Home = () => {
-    return (
-      <section className='mainHomepage'>
-        <h1>Frontend Interview Flashcards</h1>
-        <h2>Choose your interview path below</h2>
-        <span className='buttonStyling'>
-            <Link to='/behavioral'>
-                <button>Behavioral</button>
-            </Link>
-            <Link to='/technical'>
-                <button>Technical</button>
-            </Link>
-        </span>
-      </section>
-    )
-}
+  return (
+    <section className="mainHomepage">
+      <h1>Frontend Interview Flashcards</h1>
+      <h2>Choose your interview path below</h2>
+      <span className="buttonStyling">
+        <Link to="/behavioral">
+          <button type="submit">Behavioral</button>
+        </Link>
+        <Link to="/technical">
+          <button type="submit">Technical</button>
+        </Link>
+      </span>
+    </section>
+  );
+};
 
-export default Home
+export default Home;
