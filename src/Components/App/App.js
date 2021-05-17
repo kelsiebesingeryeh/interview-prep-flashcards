@@ -13,18 +13,6 @@ const App = () => {
     return list.findIndex(card => card.id === id)
   }
 
-  const filterFlashCardsCategory = (category) => {
-    return flashcards.filter((card) => card.category === category)
-  }
-  // useEffect to set the flashcards
-  // select next card
-  // find the index of the card that i have
-  // show questin
-
-  // const selectNextCard = () => {
-
-  // }
-
   return (
    <main>
      <Switch>
@@ -59,37 +47,10 @@ const App = () => {
       <Route 
       exact path='/:category/:subCategory'
       render={({ match }) => {
-        if (match.params.subCategory === 'htmlCSS') {
+        if (match.params.subCategory === 'htmlCSS' || match.params.subCategory === 'computerScience' || match.params.subCategory === 'javascript' || match.params.subCategory === 'react') {
           return (
             <Flashcards
               flashcards={flashcards}
-              subCategory={match.params.subCategory}
-              getFlashcardIndex={getFlashcardIndex}
-            />
-          );
-        } else if (match.params.subCategory === 'computerScience') {
-          return (
-            <Flashcards
-              flashcards={flashcards}
-              category={match.params.category}
-              subCategory={match.params.subCategory}
-              getFlashcardIndex={getFlashcardIndex}
-            />
-          );
-        } else if (match.params.subCategory === 'javascript') {
-          return (
-            <Flashcards
-              flashcards={flashcards}
-              category={match.params.category}
-              subCategory={match.params.subCategory}
-              getFlashcardIndex={getFlashcardIndex}
-            />
-          );
-        } else if (match.params.subCategory === 'react') {
-          return (
-            <Flashcards
-              flashcards={flashcards}
-              category={match.params.category}
               subCategory={match.params.subCategory}
               getFlashcardIndex={getFlashcardIndex}
             />
