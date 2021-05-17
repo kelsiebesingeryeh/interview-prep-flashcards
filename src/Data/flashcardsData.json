@@ -443,38 +443,32 @@
    {
     "id": 71,
     "category": "behavioral",
-    "question": "What project of yours are you most proud of and why?
-"
+    "question": "What project of yours are you most proud of and why?"
   },
   {
     "id": 72,
     "category": "behavioral",
-    "question": "What is your 100% ideal role for your first web development job?
-"
+    "question": "What is your 100% ideal role for your first web development job?"
   },
   {
     "id": 73,
     "category": "behavioral",
-    "question": "What made you switch from your prior career into programming?
-"
+    "question": "What made you switch from your prior career into programming?"
   },
   {
     "id": 74,
     "category": "behavioral",
-    "question": "Talk about a project where you had difficulty and how you worked through that.
-"
+    "question": "Talk about a project where you had difficulty and how you worked through that."
   },
   {
     "id": 75,
     "category": "behavioral",
-    "question": "What are you looking for in a company? Why would you want to work here?
-"
+    "question": "What are you looking for in a company? Why would you want to work here?"
   },
   {
     "id": 76,
     "category": "behavioral",
-    "question": "Describe an example of how you have handled a stressful situation.
-"
+    "question": "Describe an example of how you have handled a stressful situation."
   },
   {
     "id": 77,
@@ -499,26 +493,22 @@
   {
     "id": 81,
     "category": "behavioral",
-    "question": "What is an area of growth for you?
-"
+    "question": "What is an area of growth for you?"
   },
   {
     "id": 82,
     "category": "behavioral",
-    "question": "Describe your strengths. How have you seen these in practice as a developer?
-"
+    "question": "Describe your strengths. How have you seen these in practice as a developer?"
   },
   {
     "id": 83,
     "category": "behavioral",
-    "question": "Tell me about a time you failed. How did you deal with the situation?
-"
+    "question": "Tell me about a time you failed. How did you deal with the situation?"
   },
   {
     "id": 84,
     "category": "behavioral",
-    "question": "What is something that your hobbies or interests tell me about you that your resume cannot?
-"
+    "question": "What is something that your hobbies or interests tell me about you that your resume cannot?"
   },
   {
     "id": 85,
@@ -598,7 +588,6 @@
   {
     "id": 100,
     "category": "behavioral",
-    "question": "Describe a time when you dealt with poor communication.
-"
+    "question": "Describe a time when you dealt with poor communication"
   }
 ]

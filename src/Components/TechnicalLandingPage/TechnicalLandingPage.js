@@ -3,12 +3,6 @@ import "./TechnicalLandingPage.css"
 import { Link } from 'react-router-dom' 
 
 const TechnicalLandingPage = ({ category }) => {
- if (category === 'behavioral') {
-   return (
-     <h1>Behavioral</h1>
-   )
- }
-  if (category === 'technical') {
     return (
       <div className="flashcardsContainer">
         <h2 className="subCategoryTitle">
@@ -19,9 +13,7 @@ const TechnicalLandingPage = ({ category }) => {
             <button className="subCategoryButton">HTML/CSS</button>
           </Link>
           <Link to={`${category}/computerScience`}>
-            <button className="subCategoryButton">
-              Computer Science
-            </button>
+            <button className="subCategoryButton">Computer Science</button>
           </Link>
           <Link to={`${category}/javascript`}>
             <button className="subCategoryButton">JavaScript</button>
@@ -31,9 +23,8 @@ const TechnicalLandingPage = ({ category }) => {
           </Link>
         </div>
       </div>
-    )
-  }
-}
+    );
+};
 
 export default TechnicalLandingPage
 
