@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./Flashcards.css";
 import { Link } from 'react-router-dom';
+import backArrow from "../../assets/backArrow.png"; 
 
 const Flashcards = ({
   flashcards,
   subCategory,
   getFlashcardIndex,
+  category
 }) => {
   const [categoryCards, setCategoryCards] = useState(flashcards.filter((card) => card.subCategory === subCategory));
   const [currentCard, setCurrentCard] = useState(categoryCards[0]);
@@ -48,36 +50,41 @@ const Flashcards = ({
     }
     
   return (
-    <div className="flashcardsContainer">
-      <p className="question">{currentCard.question}</p>
-      <span className="arrowStyling">
-        {!lastCard && (
-          <>
-            <button
-              type="submit"
-              alt="left-arrow"
-              className={`left-arrow ${firstCard ? "disabled" : ""}`}
-              disabled={firstCard ? true : false}
-              onClick={() => selectLastFlashcard()}
-            ></button>
-            <button
-              type="submit"
-              alt="right-arrow"
-              className="right-arrow"
-              onClick={() => selectNextFlashcard()}
-            ></button>
-          </>
-        )}
-      </span>
-      {lastCard && (
+    <>
+      <div className="flashcardsContainer">
+        <Link to={category === 'technical' ? `/technical` : category === 'behavioral' ? '/' : ''}>
+          <img src={backArrow} alt="back-arrow" />
+        </Link>
+        <p className="question">{currentCard.question}</p>
         <span className="arrowStyling">
-          <Link to="/technical">
-            <button>Back to Categories</button>
-          </Link>
-          <button onClick={startOver}>Start Over</button>
+          {!lastCard && (
+            <>
+              <button
+                type="submit"
+                alt="left-arrow"
+                className={`left-arrow ${firstCard ? "disabled" : ""}`}
+                disabled={firstCard ? true : false}
+                onClick={() => selectLastFlashcard()}
+              ></button>
+              <button
+                type="submit"
+                alt="right-arrow"
+                className="right-arrow"
+                onClick={() => selectNextFlashcard()}
+              ></button>
+            </>
+          )}
         </span>
-      )}
-    </div>
+        {lastCard && (
+          <span className="arrowStyling">
+            <Link to="/technical">
+              <button>Back to Categories</button>
+            </Link>
+            <button onClick={startOver}>Start Over</button>
+          </span>
+        )}
+      </div>
+    </>
   );
 };
 
