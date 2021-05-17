@@ -1,10 +1,13 @@
 import React from 'react'
 import "./TechnicalLandingPage.css"
-import { Link } from 'react-router-dom' 
+import { Link } from 'react-router-dom'
+import backArrow from '../../assets/backArrow.png'; 
 
 const TechnicalLandingPage = ({ category }) => {
     return (
+      <>
       <div className="flashcardsContainer">
+        <img src={backArrow} alt='back-arrow'/>
         <h2 className="subCategoryTitle">
           Pick a topic to generate interview questions
         </h2>
@@ -23,6 +26,7 @@ const TechnicalLandingPage = ({ category }) => {
           </Link>
         </div>
       </div>
+      </>
     );
 };
 
