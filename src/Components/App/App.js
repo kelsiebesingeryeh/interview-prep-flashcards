@@ -39,6 +39,7 @@ const App = () => {
                 flashcards={flashcards}
                 subCategory={match.params.subCategory}
                 getFlashcardIndex={getFlashcardIndex}
+                category={match.params.category}
               />
             );
           }
@@ -53,6 +54,7 @@ const App = () => {
               flashcards={flashcards}
               subCategory={match.params.subCategory}
               getFlashcardIndex={getFlashcardIndex}
+              category={match.params.category}
             />
           );
         }
