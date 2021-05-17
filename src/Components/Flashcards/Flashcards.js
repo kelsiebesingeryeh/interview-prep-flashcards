@@ -52,9 +52,11 @@ const Flashcards = ({
   return (
     <>
       <div className="flashcardsContainer">
-        <Link to={category === 'technical' ? `/technical` : category === 'behavioral' ? '/' : ''}>
-          <img src={backArrow} alt="back-arrow" />
-        </Link>
+        <div className='backButton'>
+          <Link to={category === 'technical' ? `/technical` : category === 'behavioral' ? '/' : ''}>
+            <img src={backArrow} alt="back-arrow" />
+          </Link>
+        </div>
         <p className="question">{currentCard.question}</p>
         <span className="arrowStyling">
           {!lastCard && (
