@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
     "arrow-body-style": 0,
+    "max-len": ["error", { code: 120 }],
   },
   parser: "babel-eslint",
 };
