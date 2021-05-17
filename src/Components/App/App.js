@@ -5,7 +5,6 @@ import { Route, Switch } from 'react-router-dom';
 import TechnicalLandingPage from "../TechnicalLandingPage/TechnicalLandingPage";
 import flashcardsData from '../../Data/flashcardsData.json';
 import Flashcards from '../Flashcards/Flashcards';
-import Behavioral from '../Behavioral/Behavioral';
 
 const App = () => {
   const [flashcards, setFlashcards] = useState(flashcardsData);
@@ -48,8 +47,12 @@ const App = () => {
           }
           else if (match.params.category === 'behavioral') {
             return (
-              <Behavioral/>
-            )
+              <Flashcards
+                flashcards={flashcards}
+                subCategory={match.params.subCategory}
+                getFlashcardIndex={getFlashcardIndex}
+              />
+            );
           }
         }}
         />
@@ -94,18 +97,9 @@ const App = () => {
         }
       }}
       />
-      {/* <Route 
-      exact
-      path='/:category:/subCategory/:id'
-      render={({ match }) => {
-        return <Card id={match.params.id}/>
-      }}
-      /> */}
-
      </Switch>
-
    </main>
   )
 }
 
-export default App
+export default App;
