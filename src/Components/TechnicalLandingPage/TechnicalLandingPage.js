@@ -1,6 +1,7 @@
 import React from 'react';
 import './TechnicalLandingPage.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import backArrow from '../../assets/backArrow.png';
 
 const TechnicalLandingPage = ({ category }) => {
@@ -41,3 +42,7 @@ const TechnicalLandingPage = ({ category }) => {
 };
 
 export default TechnicalLandingPage;
+
+TechnicalLandingPage.propTypes = {
+  category: PropTypes.string.isRequired,
+};

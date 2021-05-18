@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Flashcards.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import backArrow from '../../assets/backArrow.png';
 
 const Flashcards = ({
@@ -9,7 +10,7 @@ const Flashcards = ({
   getFlashcardIndex,
   category,
 }) => {
-  const [categoryCards, setCategoryCards] = useState(flashcards.filter((card) => card.subCategory === subCategory));
+  const [categoryCards] = useState(flashcards.filter((card) => card.subCategory === subCategory));
 
   const [currentCard, setCurrentCard] = useState(categoryCards[0]);
   const [lastCard, setLastCard] = useState(false);
@@ -98,3 +99,10 @@ const Flashcards = ({
 };
 
 export default Flashcards;
+
+Flashcards.propTypes = {
+  flashcards: PropTypes.arrayOf.isRequired,
+  subCategory: PropTypes.string.isRequired,
+  getFlashcardIndex: PropTypes.func.isRequired,
+  category: PropTypes.string.isRequired,
+};
