@@ -1,59 +1,48 @@
-import React from 'react'
-import "./TechnicalLandingPage.css"
-import { Link } from 'react-router-dom'
-import backArrow from '../../assets/backArrow.png'; 
+import React from 'react';
+import './TechnicalLandingPage.css';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import backArrow from '../../assets/backArrow.png';
 
 const TechnicalLandingPage = ({ category }) => {
-    return (
-      <>
+  return (
+    <>
       <div className="flashcardsContainer">
-        <Link to='/'>
-          <img src={backArrow} alt='back-arrow'/>
+        <Link to="/">
+          <img src={backArrow} alt="back-arrow" />
         </Link>
         <h2 className="subCategoryTitle">
           Pick a topic to generate interview questions
         </h2>
         <div className="buttonContainer">
           <Link to={`/${category}/htmlCSS`}>
-            <button className="subCategoryButton">HTML/CSS</button>
+            <button className="subCategoryButton" type="submit">
+              HTML/CSS
+            </button>
           </Link>
           <Link to={`/${category}/computerScience`}>
-            <button className="subCategoryButton">Computer Science</button>
+            <button className="subCategoryButton" type="submit">
+              Computer Science
+            </button>
           </Link>
           <Link to={`/${category}/javascript`}>
-            <button className="subCategoryButton">JavaScript</button>
+            <button className="subCategoryButton" type="submit">
+              JavaScript
+            </button>
           </Link>
           <Link to={`/${category}/react`}>
-            <button className="subCategoryButton">React</button>
+            <button className="subCategoryButton" type="submit">
+              React
+            </button>
           </Link>
         </div>
       </div>
-      </>
-    );
+    </>
+  );
 };
 
-export default TechnicalLandingPage
+export default TechnicalLandingPage;
 
-//needs some sort of conditional to render either behavioral or technical
-
-//  const technicalFlashcards = flashcards.filter(card => card.category === 'technical')
-//     const behavioralFlashcards = flashcards.filter(card => card.category === 'behavioral')
-
-//     const displayFlashcards = (list) => {
-//        return list.map(flashcard => {
-//             return <Card 
-//             id={flashcard.id}
-//             key={flashcard.id}
-//             question={flashcard.question}
-//         />
-//         }) 
-//     }
-
-//     return (
-//         <div className='flashcardsContainer'>
-//             {category === 'technical' ? displayFlashcards(technicalFlashcards) :
-//                 displayFlashcards(behavioralFlashcards)
-//             }
-//         </div>
-//     )
-// }
+TechnicalLandingPage.propTypes = {
+  category: PropTypes.string.isRequired,
+};
