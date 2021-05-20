@@ -182,3 +182,71 @@ describe("Computer Science Page", () => {
     cy.get(".right-arrow").click().get(".question").should("be.visible");
   });
 });
+
+describe("React Page", () => {
+  beforeEach(() => {
+    const baseURL = "http://localhost:3000/technical/react";
+    cy.visit(baseURL);
+  });
+
+  it("should display a question", () => {
+    cy.get(".question").should("be.visible");
+  });
+
+  it("should display a back arrow", () => {
+    cy.get("img").should("be.visible");
+  });
+
+  it("should take you back to the technical landing page if you click the back arrow", () => {
+    cy.get("img").click();
+    cy.url("http://localhost:3000/technical")
+      .get(".flashcardsContainer")
+      .should("be.visible");
+  });
+
+  it("should display a left arrow", () => {
+    cy.get(".left-arrow").should("be.disabled");
+  });
+
+  it("should display a right arrow", () => {
+    cy.get(".right-arrow").should("be.visible");
+  });
+
+  it("should allow a user to click on the right arrow and be taken to another question", () => {
+    cy.get(".right-arrow").click().get(".question").should("be.visible");
+  });
+});
+
+describe("JavaScript Page", () => {
+  beforeEach(() => {
+    const baseURL = "http://localhost:3000/technical/javascript";
+    cy.visit(baseURL);
+  });
+
+  it("should display a question", () => {
+    cy.get(".question").should("be.visible");
+  });
+
+  it("should display a back arrow", () => {
+    cy.get("img").should("be.visible");
+  });
+
+  it("should take you back to the technical landing page if you click the back arrow", () => {
+    cy.get("img").click();
+    cy.url("http://localhost:3000/technical")
+      .get(".flashcardsContainer")
+      .should("be.visible");
+  });
+
+  it("should display a left arrow", () => {
+    cy.get(".left-arrow").should("be.disabled");
+  });
+
+  it("should display a right arrow", () => {
+    cy.get(".right-arrow").should("be.visible");
+  });
+
+  it("should allow a user to click on the right arrow and be taken to another question", () => {
+    cy.get(".right-arrow").click().get(".question").should("be.visible");
+  });
+});
