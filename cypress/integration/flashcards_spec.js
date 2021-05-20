@@ -77,7 +77,7 @@ describe("Technical Landing Page", () => {
   });
 
   it("should take you back to the homepage if you click the back arrow", () => {
-    cy.get("img").click()
+    cy.get("img").click();
     cy.url("http://localhost:3000").get(".mainHomepage").should("be.visible");
   });
 
@@ -104,7 +104,8 @@ describe("Technical Landing Page", () => {
 
   it("should allow a user to click on the JavaScript path and be taken to that page", () => {
     cy.get(".subCategoryButton")
-      .eq(2).click()
+      .eq(2)
+      .click()
       .url("http://localhost:3000/technical/javascript");
   });
 
@@ -114,5 +115,70 @@ describe("Technical Landing Page", () => {
       .click()
       .url("http://localhost:3000/technical/react");
   });
+});
 
+  describe("HTML/CSS Page", () => {
+    beforeEach(() => {
+      const baseURL = "http://localhost:3000/technical/htmlCSS";
+      cy.visit(baseURL);
+    });
+
+  it("should display a question", () => {
+    cy.get(".question").should("be.visible");
+  });
+
+  it("should display a back arrow", () => {
+    cy.get("img").should("be.visible");
+  });
+
+  it("should take you back to the technical landing page if you click the back arrow", () => {
+    cy.get("img").click();
+    cy.url("http://localhost:3000/technical").get(".flashcardsContainer").should("be.visible");
+  });
+
+  it("should display a left arrow", () => {
+    cy.get(".left-arrow").should("be.disabled");
+  });
+
+  it("should display a right arrow", () => {
+    cy.get(".right-arrow").should("be.visible");
+  });
+
+  it("should allow a user to click on the right arrow and be taken to another question", () => {
+    cy.get(".right-arrow").click().get(".question").should("be.visible");
+  });
+});
+
+describe("Computer Science Page", () => {
+  beforeEach(() => {
+    const baseURL = "http://localhost:3000/technical/computerScience";
+    cy.visit(baseURL);
+  });
+
+  it("should display a question", () => {
+    cy.get(".question").should("be.visible");
+  });
+
+  it("should display a back arrow", () => {
+    cy.get("img").should("be.visible");
+  });
+
+  it("should take you back to the technical landing page if you click the back arrow", () => {
+    cy.get("img").click();
+    cy.url("http://localhost:3000/technical")
+      .get(".flashcardsContainer")
+      .should("be.visible");
+  });
+
+  it("should display a left arrow", () => {
+    cy.get(".left-arrow").should("be.disabled");
+  });
+
+  it("should display a right arrow", () => {
+    cy.get(".right-arrow").should("be.visible");
+  });
+
+  it("should allow a user to click on the right arrow and be taken to another question", () => {
+    cy.get(".right-arrow").click().get(".question").should("be.visible");
+  });
 });
