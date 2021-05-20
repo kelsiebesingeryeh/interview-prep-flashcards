@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Frontend Interview Flashcards
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+View the deployed site [here](https://interview-prep-flashcards.vercel.app/).
 
-## Available Scripts
+### Table of Contents
+- [Introduction](#introduction)
+- [Instructions](#set-up-instructions)
+- [Features](#features)
+- [Challenges and Wins](#challenges-and-wins)
+- [Tech Stack](#tech-stack)
 
-In the project directory, you can run:
+## Introduction
+I created this project as a side project to deepen my understanding of React hooks. I used sample interview questions provided to me by the Turing School of Software and Design. I wanted to make an application that would be helpful for new grads to study and practice interview questions. I created it in a way so that a person can pick and choose what they wanted to work on rather than just listing all of the questions at once. 
 
-### `npm start`
+## Set-Up Instructions
+1. Clone the respository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```git@github.com:kelsiebesingeryeh/crypto-watch.git```
 
+2. Install dependencies
+
+```npm install```
+
+3. Start the app in development mode
+
+```npm start```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+5. Start the test suites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```npx cypress open```
 
-### `npm run build`
+6. To Run the testing suite hit 'run integration tests'
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. Cypress will open a new window to run all the tests. Watch the magic happen in real time!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
+When a user goes to the website, they are greeted on a homepage with two options to chose from for interview questions - either behavioral or technical.
+![homepage](https://i.imgur.com/2JpMhPt.png)
+![demo-video](https://media.giphy.com/media/fB7DjuTJerp03OYMJo/giphy.gif)
 
-### `npm run eject`
+If a user selects behavioral, they are taken to a behavioral interview questions page and displayed a question. A user can then click on the left/right arrows to navigate through all of the questions. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Behavioral
+A user is displayed a behavioral question. They can click on the arrow to go back and forth between questions. Once they get to the end of the question list, they can either start over or go back to the main homepage. At any point in time, they can click the back arrow and are taken back to the homepage.
+![behavioral](https://i.imgur.com/rCklodJ.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Technical Landing Page
+If a user selects 'technical', they are taken to a technical landing page where they can choose from 4 different categorys of questions to practice. They can pick HTML/CSS, Computer Science, JavaScript and React. At any point in time a user can go back to the main homepage.
+![technicallandingPage](https://i.imgur.com/C5lVcTH.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### HTML/CSS, Computer Science, JavaScript, React
+A user can select any of the 4 categories and they are taken to a page where questions will be displayed depending on the path they chose. The questions have been pre-categorized. They can navigate back and forth through the left and right arrows and can go back to the landing page at any time. Once they get to the end of the question list, they can either start over or go back to the main homepage
+![subcategoryQuestions](https://i.imgur.com/he43UyA.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Challenges and Wins
+* **Challenges**: I would say my biggest challenge in this project was the logic of the application. I had some trouble getting the next card selection as well as making sure the DOM was up-to-date with the state. I had to create the logic and use the indices of the flashcard data array to go to the next card. I also had some trouble with react router as some of the routes take you to another page while other take you to a landing page. Figuring out which components I could re-use was also tricky.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* **Wins**: My biggest win in this project was being able to implement React Hooks. I started this side project as a way to learn and understand hooks and I was excited to try it out by using UseState and UseEffect in my project. It was cool to see it come to life and I am excited that I was able to learn this on my own. I was also excited to use conditional rendering for disabling the left and right arrows depending on if you were on the first card or last card.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Tech Stack
+Technologies used: 
+* JavaScript
+* React, React Hook, React Router
+* CSS
+* Cypress
+* Vercel
+* Circle CI
+* GitHub Projects
