@@ -15,7 +15,7 @@ I created this project as a side project to deepen my understanding of React hoo
 ## Set-Up Instructions
 1. Clone the respository
 
-```git@github.com:kelsiebesingeryeh/crypto-watch.git```
+```git@github.com:kelsiebesingeryeh/interview-prep-flashcards.git```
 
 2. Install dependencies
 
@@ -41,7 +41,6 @@ You will also see any lint errors in the console.
 ## Features
 When a user goes to the website, they are greeted on a homepage with two options to chose from for interview questions - either behavioral or technical.
 ![homepage](https://i.imgur.com/2JpMhPt.png)
-![demo-video](https://media.giphy.com/media/fB7DjuTJerp03OYMJo/giphy.gif)
 
 If a user selects behavioral, they are taken to a behavioral interview questions page and displayed a question. A user can then click on the left/right arrows to navigate through all of the questions. 
 
