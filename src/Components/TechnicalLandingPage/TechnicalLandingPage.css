@@ -23,6 +23,12 @@
     align-self: center;
 }
 
+/* MOBILE LARGER PHONES */
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+
+}
+
 /* MOBILE - small devices */
 
 @media screen and (max-width: 375px) {
@@ -37,7 +43,7 @@
     }
 
     .subCategoryButton {
-        margin-left: 0;
+        margin: 0.5rem;
         width: 200px;
     }
 
