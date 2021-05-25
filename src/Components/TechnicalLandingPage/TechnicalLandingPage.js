@@ -9,7 +9,9 @@ const TechnicalLandingPage = ({ category }) => {
     <>
       <div className="flashcardsContainer">
         <Link to="/">
-          <img src={backArrow} alt="back-arrow" />
+          <div className="backButton">
+            <img src={backArrow} alt="back-arrow" />
+          </div>
         </Link>
         <h2 className="subCategoryTitle">
           Pick a topic to generate interview questions
