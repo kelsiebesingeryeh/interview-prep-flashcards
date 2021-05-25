@@ -35,3 +35,13 @@ button {
 button:hover {
     background-color: #030235;
 }
+
+@media screen and (max-width: 375px) {
+    .mainHomepage {
+     padding: 3rem;
+    }
+    .behavioralButton {
+        margin-right: 1rem;
+    }
+
+}

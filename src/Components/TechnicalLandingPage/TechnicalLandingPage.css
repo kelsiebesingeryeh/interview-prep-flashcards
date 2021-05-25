@@ -22,3 +22,5 @@
 .subCategoryTitle {
     align-self: center;
 }
+
+@media screen and (max-width: 375px) {}

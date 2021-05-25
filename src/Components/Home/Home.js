@@ -9,7 +9,7 @@ const Home = () => {
       <h2>Choose your interview path below</h2>
       <span className="buttonStyling">
         <Link to="/behavioral">
-          <button type="submit">Behavioral</button>
+          <button type="submit" className="behavioralButton">Behavioral</button>
         </Link>
         <Link to="/technical">
           <button type="submit">Technical</button>

@@ -36,4 +36,6 @@
     right: 4rem;
 }
 
-/* @media  */
+@media screen and (max-width: 375px) {
+    
+}
