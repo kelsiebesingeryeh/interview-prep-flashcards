@@ -23,4 +23,11 @@
     align-self: center;
 }
 
-@media screen and (max-width: 375px) {}
+/* MOBILE - small devices */
+
+@media screen and (max-width: 375px) {
+    .flashcardsContainer {
+        width: 40%;
+    }
+
+}
