@@ -35,3 +35,41 @@ button {
 button:hover {
     background-color: #030235;
 }
+
+
+/* TABLETS */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+     /* .mainHomepage {
+         padding: 3rem;
+     } */
+
+     .behavioralButton {
+         margin-right: 1rem;
+     }
+}
+
+/* MOBILE LARGER PHONES */
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+    .mainHomepage {
+        padding: 3rem;
+    }
+
+    .behavioralButton {
+        margin-right: 1rem;
+    }
+
+}
+
+/* MOBILE - small devices */
+
+@media screen and (max-width: 375px) {
+    .mainHomepage {
+     padding: 3rem;
+    }
+    .behavioralButton {
+        margin-right: 1rem;
+    }
+
+}
